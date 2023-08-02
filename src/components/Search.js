@@ -1,10 +1,13 @@
 import React from 'react'
 
-export default function Search(props) {
+export default function Search({onChange}) {
   // STRETCH - What prop do we need to be able to change the value of
   // the search term (which is state that lives in the top-level component)?
+
   const changeHandler = event => {
     // STRETCH - On 'change' of the input we should set a new search term in app state
+    onChange(event.target.value)
+    console.log(event.target.value);
   }
 
   return (
